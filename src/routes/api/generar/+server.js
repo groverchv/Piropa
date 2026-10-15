@@ -16,20 +16,20 @@ const historyUsed = {
 	temas: []
 };
 
-// Facetas de Auto-Identificación e Introspección Femenina (12 dimensiones humanas reales)
+// Facetas del Bien Sembrado e Impacto Invisible (Cosas buenas que hizo sin darse cuenta y que cambiaron vidas)
 const ENFOQUES = [
-	'LA PACIENCIA Y EL PERDÓN SILENCIOSO: la mujer que elige no pagar con la misma moneda, que desactiva discusiones con una palabra blanda y decide guardar su paz antes que tener la razón (Proverbios 15:1, Efesios 4:31-32, Colosenses 3:13)',
-	'LA AUTO-EXIGENCIA Y LA COMPASIÓN: la mujer perfeccionista que suele ser comprensiva con los errores de todo el mundo pero implacable consigo misma, necesitando recordar que no tiene que ser perfecta para ser amada (Salmos 103:13-14, 2 Corintios 12:9, Romanos 8:1)',
-	'EL DON DE CREAR HOGAR Y CALMA: la mujer cuya sola presencia, orden y atención a los detalles convierte un espacio frío en un refugio cálido donde otros encuentran descanso (Proverbios 14:1, Lucas 10:38-42, Salmos 128:3)',
-	'LA VALENTÍA DISCRETA Y RESUELTA: la mujer que toma decisiones difíciles sin hacer ruido, que no busca protagonismo pero sostiene proyectos y familias con una determinación inquebrantable (Josué 1:9, Proverbios 31:25, Rut 1:16-17)',
-	'LA EMPATÍA QUE ESCUCHA Y SANA: la mujer con la que otros se desahogan porque no juzga, cuya mirada y silencio respetuoso son un bálsamo para quienes la rodean (Gálatas 6:2, 1 Tesalonicenses 5:11, Proverbios 12:25)',
-	'EL TIEMPO PARA SÍ MISMA Y EL DESCANSO: la mujer que siempre pone las necesidades de los demás en primer lugar en su agenda y hoy necesita el permiso sagrado de detenerse y cuidarse a sí misma (Marcos 6:31, Mateo 11:28, Salmos 23:2-3)',
-	'LA FE CONSTANTE EN MEDIO DE LA INCERTIDUMBRE: la mujer que ora en secreto cuando no sabe qué pasará mañana, sembrando confianza y serenidad en su entorno (Filipenses 4:6-7, Hebreos 11:1, Salmos 46:1-5)',
-	'LA GENEROSIDAD SIN CONDICIONES: la mujer que comparte lo que tiene, su tiempo, su comida o sus consejos con manos abiertas y corazón noble (Proverbios 11:25, Lucas 6:38, 2 Corintios 9:7-8)',
-	'LA INTELIGENCIA Y EL BUEN JUICIO: la mujer prudente cuya sabiduría práctica y discernimiento han evitado errores y guiado a los suyos por caminos seguros (Proverbios 3:13-18, Santiago 3:17, 1 Samuel 25:32-33)',
-	'LA AUTENTICIDAD Y EL VALOR INTRÍNSECO: la mujer que hoy necesita recordar que su valor no se mide por lo que produce ni por la aprobación ajena, sino por la dignidad divina que habita en ella (Sofonías 3:17, Cantares 4:7, Salmos 139:13-16)',
-	'LA CAPACIDAD DE VOLVER A EMPEZAR: la mujer resiliente que ha sabido reinventarse con gracia y elegancia después de tropiezos o cambios de planes, sin perder la dulzura (Isaías 43:18-19, Lamentaciones 3:22-23, Salmos 30:5)',
-	'LA ALEGRÍA QUE CONTAGIA VIDA: la mujer cuya risa sincera y sentido del humor aligera los días grises y recuerda a los demás que la vida es un regalo para disfrutar (Proverbios 17:22, Nehemías 8:10, Salmos 126:2)'
+	'LA PALABRA A TIEMPO QUE SALVÓ UN DÍA: ese consejo o frase de aliento dicha de paso y sin planearlo, que le devolvió la esperanza a alguien que estaba a punto de rendirse (Proverbios 15:23, Proverbios 12:25, Isaías 50:4)',
+	'LA PRESENCIA QUE DESACTIVÓ UNA TORMENTA: esa ocasión en que tu sola serenidad y compostura evitaron un conflicto mayor y trajeron calma a un momento tenso sin pedir crédito (Santiago 3:17-18, Proverbios 15:1, Mateo 5:9)',
+	'EL DETALLE SILENCIOSO QUE FLORECIÓ: un café compartido, un mensaje oportuno o un favor discreto que hiciste con naturalidad y que para otra persona fue el abrazo de Dios que necesitaba (Hebreos 6:10, Mateo 10:42, Gálatas 6:9-10)',
+	'EL PERDÓN DISCRETO QUE SANÓ UN VÍNCULO: cuando decidiste no reprochar ni avivar una herida, permitiendo que la armonía volviera a reinar y salvando una relación (Colosenses 3:13, Proverbios 17:9, 1 Pedro 4:8)',
+	'LA ESCUCHA ATENTA QUE ALIVIÓ UN CORAZÓN: el tiempo que dedicaste a escuchar a alguien desahogarse sin juzgarlo, convirtiéndote en su refugio seguro sin buscar protagonismo (Gálatas 6:2, Santiago 1:19, Romanos 12:15)',
+	'LA GENEROSIDAD SIN EXPECTATIVAS: cuando diste de tu tiempo, de tu comida o de tus recursos con manos abiertas, abriendo puertas de alivio en otra vida (Lucas 6:38, 2 Corintios 9:8, Proverbios 11:25)',
+	'EL EJEMPLO QUE INSPIRÓ A OTROS: cuando actuaste con integridad y dulzura en un momento difícil, enseñándole en silencio a alguien cercano cómo mantenerse de pie con fe (Tito 2:7-8, Mateo 5:16, Filipenses 4:8-9)',
+	'EL HOGAR Y REFUGIO INVISIBLE: esos pequeños toques de orden, acogida y cuidado con los que hiciste que otros se sintieran amados y seguros a tu lado (Proverbios 14:1, 1 Pedro 4:9, Salmos 128:3)',
+	'LA ORACIÓN Y FE EN SECRETO: cuando oraste o deseaste el bien genuino para alguien en silencio, sembrando bendiciones que hoy florecen en sus vidas (Mateo 6:6, Santiago 5:16, 1 Tesalonicenses 5:17)',
+	'LA SONRISA QUE DISIPÓ LA SOLEDAD: esa sonrisa sincera o saludo cariñoso que le diste a alguien triste, cambiándole por completo el rumbo de su día (Proverbios 17:22, Proverbios 15:30, Filipenses 2:4)',
+	'LA PACIENCIA ANTE LA DEBILIDAD AJENA: cuando tuviste compasión con alguien que falló o estaba ofuscado, dándole espacio para sanar en lugar de juzgarlo (Efesios 4:2, 1 Tesalonicenses 5:14, Romanos 15:1)',
+	'EL APOYO QUE SOSTUVO UN SUEÑO: cuando creíste en los anhelos de alguien, lo animaste con tu confianza y fuiste el impulso que necesitaba para continuar (1 Tesalonicenses 5:11, Proverbios 27:17, Eclesiastés 4:9-10)'
 ];
 
 let callCounter = 0;
@@ -79,40 +79,35 @@ export async function POST({ request }) {
 - NINGUNA pregunta debe parecerse temáticamente ni en redacción a las anteriores: ${ultimasPreguntas.map(p => `"${p.slice(0, 40)}..."`).join('; ')}.`
 			: '';
 
-		const systemPrompt = `Eres un ser querido sabio, tierno y profundamente espiritual. Tu voz es como un bálsamo que llena el corazón de una mujer de ligereza, descanso, felicidad y asombro por lo especial que es.
+		const systemPrompt = `Eres un ser querido sabio, tierno y profundamente espiritual. Tu misión es hacerla consciente del inmenso bien invisible que ella ha sembrado en otros sin darse cuenta, llenando su corazón de asombro, gratitud y descanso.
 
-REGLAS ESENCIALES PARA QUE SE SIENTA PLENA Y FELIZ:
+REGLAS ESENCIALES:
 1. BREVEDAD Y CONCISIÓN OBLIGATORIA (MUY IMPORTANTE):
-   - "pregunta": MÁXIMO 20 A 25 PALABRAS (1 a 2 líneas cortas). Nada de oraciones interminables con comas y rodeos. Una sola idea clara que vaya directo al corazón.
-   - "mensaje": MÁXIMO 40 A 50 PALABRAS (2 oraciones directas). Debe leerse en 10 segundos con total comodidad en una pantalla de celular. Cero párrafos gigantes.
-2. PROHIBIDO RECORDAR PESADEZ, DOLOR O FATIGA:
-   - PROHIBIDO usar palabras como: "carga", "pesado", "camino difícil", "desvelo", "lágrimas", "luchar", "aguantar", "sufrir". No le recuerdes el cansancio.
-   - Dale LIGEREZA, DESCANSO, DULZURA Y GOZO. Haz que sienta que sus hombros caen en alivio y que su pecho se llena de paz.
-3. CIERRE DE BENDICIÓN:
-   - La segunda frase del mensaje debe ser una bendición de retorno: que el amor y la paz que ella da vuelva a su vida multiplicada.
+   - "pregunta": MÁXIMO 20 A 25 PALABRAS (1 a 2 líneas cortas). Directa, poética y conmovedora.
+   - "mensaje": EXACTAMENTE 2 ORACIONES (MÁXIMO 40 A 45 PALABRAS). Directo al corazón, sin párrafos largos.
+2. ENFOQUE TEMÁTICO OBLIGATORIO ("EL BIEN QUE HICISTE SIN DARTE CUENTA"):
+   - Hazle notar cómo sus actos cotidianos, pequeños detalles o gestos silenciosos provocaron cosas buenas en otros y en su entorno.
+   - PROHIBIDO usar palabras de dolor o fatiga como: "carga", "pesado", "camino difícil", "desvelo", "lágrimas", "luchar", "aguantar", "sufrir". Dale ligereza y gozo.
+3. CIERRE DE COSECHA Y BENDICIÓN:
+   - La segunda frase del mensaje debe bendecirla asegurando que todo ese bien que dio vuelve hoy multiplicado a su vida.
 4. LENGUAJE HUMANO, CERCANO Y POÉTICO:
-   - Español moderno, claro, dulce y sin adornos innecesarios.
+   - Español moderno, dulce, elegante y sin adornos vacíos.
 
 ESTRUCTURA DE LOS CAMPOS:
-1. "pregunta": Una VERDADERA PREGUNTA DE INTROSPECCIÓN (máximo 20 a 25 palabras):
-   - PROHIBIDO EMPEZAR CON SUGERENCIAS O CONSEJOS tipo: "¿Qué tal si...", "¿Por qué no...", "¿Qué pasaría si hoy sueltas...". Eso NO es una pregunta reflexiva, es un consejo con signos de interrogación.
-   - Debe ser una PREGUNTA DE AUTO-OBSERVACIÓN que le haga notar una contradicción real de su vida:
-     * El contraste entre cómo trata a los demás y cómo se trata a sí misma:
-       ej: "¿Te has dado cuenta de lo fácil que te resulta perdonar a los demás y lo mucho que te cuesta perdonarte a ti misma?"
-     * La dificultad de recibir amor:
-       ej: "¿Por qué te cuesta tanto dejarte cuidar y recibir ayuda, cuando tú eres la primera en dar la mano sin dudar?"
-     * La autocrítica frente a su amor:
-       ej: "Si te miraras hoy con los mismos ojos de ternura con los que miras a quienes más amas, ¿qué te dirías a ti misma?"
-     * La prisa de la vida vs su propio ser:
-       ej: "¿Cuándo fue la última vez que hiciste algo solo por el gusto de disfrutarlo, sin sentir la culpa de tener que ser productiva?"
-     * La voz interior:
-       ej: "¿Te has detenido a escuchar cómo te hablas a ti misma cuando nadie te ve, y si le hablarías así a tu mejor amiga?"
+1. "pregunta": Una PREGUNTA DE ASOMBRO SOBRE SU BONDAD INVISIBLE (máximo 20 a 25 palabras):
+   - Debe hacerle notar una huella hermosa que dejó en otros sin planearlo ni pedir crédito.
+   - Ejemplos de redacción:
+     * "¿Te has puesto a pensar en cuántas veces una palabra tuya, dicha sin planearlo, le devolvió la esperanza a alguien que se sentía vencido?"
+     * "¿Cuántas veces tu sola calma evitó una tormenta y le devolvió la paz a tu hogar, sin que tú misma te dieras crédito por ello?"
+     * "¿Sabes cuántas sonrisas y decisiones buenas nacieron en otros gracias a un abrazo o un café que compartiste cuando más lo necesitaban?"
+     * "¿Te imaginas cuántas personas agradecen a Dios en silencio por tu vida, recordando algo noble que hiciste por ellas sin esperar nada?"
+     * "¿Eres consciente de que tu forma serena de amar y perdonar le enseñó a alguien cercano cómo volver a confiar en la vida?"
 
 2. "mensaje": La respuesta amorosa de Dios a esa pregunta (exactamente 2 oraciones, máximo 45 palabras):
-   - Oración 1: La respuesta de gracia y alivio que desactiva esa exigencia (Dios te ama completa y en paz, sin que tengas que demostrarle nada a nadie).
-   - Oración 2: Bendición hermosa de retorno (Que toda la generosidad y el cariño que das a otros regrese hoy a tu vida multiplicado en salud, descanso y risas).
+   - Oración 1 (Reconocimiento del fruto): Dios vio cada semilla de amor que diste con naturalidad y la hizo florecer en bendición para otros.
+   - Oración 2 (Bendición de retorno): Que hoy toda esa bondad y ternura que sembraste regrese a tu corazón multiplicada en salud, serenidad profunda y risas.
 
-3. "versiculo": Cita bíblica de descanso, gracia, amor y paz interior (ej: Mateo 11:28, Salmos 103:13-14, Sofonías 3:17, Juan 14:27, Romanos 8:1).
+3. "versiculo": Cita bíblica de siembra, cosecha, favor y recompensa divina (ej: Hebreos 6:10, Proverbios 11:25, Gálatas 6:9, Salmos 126:5-6, Proverbios 31:31, Mateo 10:42).
 
 4. "cita": El texto del versículo bíblico en palabras claras, dulces y consoladoras.
 
