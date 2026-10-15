@@ -297,11 +297,6 @@
 								</div>
 								<div class="postal-verse-quote">«{mensajeData.cita}»</div>
 							</div>
-
-							<!-- Toque de bendición final dorada y sutil -->
-							<p class="postal-blessing-footer fade-in-section">
-								<span>✦ Guardada en gracia y bendición eterna ✦</span>
-							</p>
 						{/if}
 					</div>
 
@@ -777,16 +772,6 @@
 		line-height: 1.45;
 		font-style: italic;
 		font-weight: 500;
-	}
-
-	.postal-blessing-footer {
-		margin-top: 1.1rem;
-		font-size: 0.82rem;
-		color: #b45309;
-		letter-spacing: 0.08em;
-		font-weight: 600;
-		text-transform: uppercase;
-		opacity: 0.85;
 	}
 
 	/* Botón para guardar postal */

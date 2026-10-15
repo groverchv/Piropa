@@ -1,5 +1,12 @@
 import { json } from '@sveltejs/kit';
+import { GROQ_API_KEY } from '$app/env/private';
 import Groq from 'groq-sdk';
+import dns from 'node:dns';
+
+if (dns.setDefaultResultOrder) {
+	dns.setDefaultResultOrder('ipv4first');
+}
+
 
 // Registro de memoria de elementos ya usados para impedir repeticiones
 /** @type {{ preguntas: string[], versiculos: string[], temas: string[] }} */
@@ -39,9 +46,10 @@ export async function POST({ request }) {
 
 	const nombre = typeof body.nombre === 'string' ? body.nombre.trim() : 'Amada mujer';
 
-	const groqApiKey = process.env.GROQ_API_KEY;
+	const groqApiKey = GROQ_API_KEY || (typeof process !== 'undefined' ? process.env?.GROQ_API_KEY : undefined);
 
 	if (!groqApiKey) {
+		console.error('[API /api/generar] GROQ_API_KEY no encontrada en env');
 		return json({ error: 'Falta configurar GROQ_API_KEY' }, { status: 500 });
 	}
 
