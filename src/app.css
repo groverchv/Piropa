@@ -1,0 +1,55 @@
+:root {
+	/* Paleta luminosa, iridiscente y floral pastel */
+	--bg-primary: #d8b4fe;
+	--bg-gradient: linear-gradient(135deg, #e9d5ff 0%, #c4b5fd 25%, #a5b4fc 55%, #67e8f9 85%, #5eead4 100%);
+	
+	/* Tonos de la silueta y flores de papel */
+	--purple-silhouette: #8b5cf6;
+	--purple-deep: #5b21b6;
+	--purple-lavender: #ddd6fe;
+	--mint-leaf: #2dd4bf;
+	--cyan-pastel: #38bdf8;
+	--pink-blush: #f472b6;
+	--pink-light: #fdf2f8;
+	
+	--card-bg: rgba(255, 255, 255, 0.45);
+	--card-border: rgba(255, 255, 255, 0.7);
+	--text-primary: #3b0764;
+	--text-secondary: #581c87;
+	--text-muted: #6b21a8;
+
+	--font-serif: 'Cormorant Garamond', Georgia, serif;
+	--font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	font-family: var(--font-sans);
+	background: var(--bg-gradient);
+	background-attachment: fixed;
+	color: var(--text-primary);
+	min-height: 100vh;
+	min-height: 100dvh;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+	touch-action: manipulation;
+}
+
+button {
+	font-family: inherit;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	transition: all 0.25s ease;
+}
+
+input, select {
+	font-family: inherit;
+	outline: none;
+}
